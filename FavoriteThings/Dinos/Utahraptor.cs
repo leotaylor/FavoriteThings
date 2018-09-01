@@ -4,18 +4,14 @@ using System.Text;
 
 namespace FavoriteThings.Dinos
 {
-    class Utahraptor
+    class Utahraptor : DinoBase
     {
-        public string Dino { get; private set; } = "Utahraptor";
-        public string TimePeriod { get; private set; } = "Early Cretacious";
         public bool isCarnivore { get; private set; } = true;
 
-        public void printTimePeriod()
-        {
-            Console.WriteLine($"{Dino} lived during the {TimePeriod} period.");
-        }
+        public Utahraptor() : base("Utahraptor", "Early Cretacious")
+        { }
 
-        public void Carnivore()
+        public override void Carnivore()
         {
             if (isCarnivore)
             {
@@ -26,6 +22,5 @@ namespace FavoriteThings.Dinos
                 Console.WriteLine("This dino was an herbivore.");
             }
         }
-
     }
 }

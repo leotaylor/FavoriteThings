@@ -4,18 +4,14 @@ using System.Text;
 
 namespace FavoriteThings.Dinos
 {
-    class Stegosaurus
+    class Stegosaurus : DinoBase
     {
-        public string Dino { get; private set; } = "Stegosaurus";
-        public string TimePeriod { get; private set; } = "Late Jurasssic";
         public bool isCarnivore { get; private set; } = false;
 
-        public void printTimePeriod()
-        {
-            Console.WriteLine($"{Dino} lived during the {TimePeriod} period.");
-        }
+        public Stegosaurus() : base("Stegosaurus", "Late Jurassic")
+        { }
 
-        public void Carnivore()
+        public override void Carnivore()
         {
             if (isCarnivore)
             {

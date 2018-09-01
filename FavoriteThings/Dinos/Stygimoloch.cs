@@ -4,18 +4,14 @@ using System.Text;
 
 namespace FavoriteThings.Dinos
 {
-    class Stygimoloch
+    class Stygimoloch : DinoBase
     {
-        public string Dino { get; private set; } = "Stygimoloch";
-        public string TimePeriod { get; private set; } = "Late Cretacious";
         public bool isCarnivore { get; private set; } = false;
 
-        public void printTimePeriod()
-        {
-            Console.WriteLine($"{Dino} lived during the {TimePeriod} period.");
-        }
+        public Stygimoloch() : base("Stygimoloch", "Early Cretacious")
+        { }
 
-        public void Carnivore()
+        public override void Carnivore()
         {
             if (isCarnivore)
             {

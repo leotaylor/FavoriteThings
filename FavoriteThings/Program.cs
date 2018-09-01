@@ -8,27 +8,21 @@ namespace FavoriteThings
         static void Main(string[] args)
         {
             var utahraptor = new Utahraptor();
-            utahraptor.printTimePeriod();
-            utahraptor.Carnivore();
-            Console.WriteLine();
-            Console.ReadLine();
 
             var triceratops = new Triceratops();
-            triceratops.printTimePeriod();
-            triceratops.Carnivore();
-            Console.WriteLine();
-            Console.ReadLine();
 
             var stygimoloch = new Stygimoloch();
-            stygimoloch.printTimePeriod();
-            stygimoloch.Carnivore();
-            Console.WriteLine();
-            Console.ReadLine();
 
             var stegasaurus = new Stegosaurus();
-            stegasaurus.printTimePeriod();
-            stegasaurus.Carnivore();
-            Console.ReadLine();
+
+            var dinos = new DinoBase[] { utahraptor, triceratops, stegasaurus, stygimoloch };
+
+            foreach(var dino in dinos)
+            {
+                dino.PrintDinos();
+                dino.Carnivore();
+                Console.ReadLine();
+            }
         }
     }
 }
