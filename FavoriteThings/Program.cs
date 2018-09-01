@@ -9,19 +9,14 @@ namespace FavoriteThings
         static void Main(string[] args)
         {
             var utahraptor = new Utahraptor();
-
             var triceratops = new Triceratops();
-
             var stygimoloch = new Stygimoloch();
-
             var stegosaurus = new Stegosaurus();
-
             var dinos = new DinoBase[] { utahraptor, triceratops, stegosaurus, stygimoloch };
 
             var boxer = new Boxer();
             var rotweiler = new Rotweiler();
             var chihuahua = new Chihuahua();
-
             var dogs = new DogBase[] { boxer, rotweiler, chihuahua };
 
             Console.WriteLine("Do You want to learn about dogs or dinosaurs? (dog/dino)");
