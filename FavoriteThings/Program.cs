@@ -1,5 +1,6 @@
 ﻿using System;
 using FavoriteThings.Dinos;
+using FavoriteThings.Dogs;
 
 namespace FavoriteThings
 {
@@ -13,15 +14,36 @@ namespace FavoriteThings
 
             var stygimoloch = new Stygimoloch();
 
-            var stegasaurus = new Stegosaurus();
+            var stegosaurus = new Stegosaurus();
 
-            var dinos = new DinoBase[] { utahraptor, triceratops, stegasaurus, stygimoloch };
+            var dinos = new DinoBase[] { utahraptor, triceratops, stegosaurus, stygimoloch };
 
-            foreach(var dino in dinos)
+            var boxer = new Boxer();
+            var rotweiler = new Rotweiler();
+            var chihuahua = new Chihuahua();
+
+            var dogs = new DogBase[] { boxer, rotweiler, chihuahua };
+
+            Console.WriteLine("Do You want to learn about dogs or dinosaurs? (dog/dino)");
+
+            string answer = Console.ReadLine();
+
+            if (answer == "dino")
             {
-                dino.PrintDinos();
-                dino.Carnivore();
-                Console.ReadLine();
+                foreach (var dino in dinos)
+                {
+                    dino.PrintDinos();
+                    dino.Carnivore();
+                    Console.ReadLine();
+                }
+            } else if (answer == "dog")
+            {
+                foreach (var dog in dogs)
+                {
+                    dog.PrintDogs();
+                    dog.Loyalty();
+                    Console.ReadLine();
+                }
             }
         }
     }
