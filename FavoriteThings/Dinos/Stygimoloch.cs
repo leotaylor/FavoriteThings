@@ -6,21 +6,7 @@ namespace FavoriteThings.Dinos
 {
     class Stygimoloch : DinoBase
     {
-        public bool isCarnivore { get; private set; } = false;
-
-        public Stygimoloch() : base("Stygimoloch", "Early Cretacious")
+        public Stygimoloch() : base("Stygimoloch", "Early Cretacious", false)
         { }
-
-        public override void Carnivore()
-        {
-            if (isCarnivore)
-            {
-                Console.WriteLine("This dino was carnivorous.");
-            }
-            else
-            {
-                Console.WriteLine("This dino was an herbivore.");
-            }
-        }
     }
 }
